@@ -68,3 +68,68 @@ print('jet2' in typeshii) #this is true, i guess
 print('shii' in typeshii) #false
 print('3' in typeshii) #false
 print('ho' in typeshii) #true
+
+
+#STTRING METHODS
+string = 'i love food'
+
+#to turn this to upper or lower case
+string_upper = string.upper()
+print(string_upper)
+
+string_lower = string.lower()
+print(string_lower)
+
+#to replace old from new
+replacer = 'gimme some food'
+replacer_new = replacer.replace('gimme' , 'gluttons love')
+print(replacer_new)
+
+#to split it all
+split_string = string.split()
+print(split_string)
+
+#to join
+puppies_list = ['lizo' , ' is ' , 'a ', 'fat ' , 'dog']
+joined_puppies_list = ' '.join(puppies_list)
+print(joined_puppies_list)
+
+#we gon start all this shii with a prefix startswith(prefix)
+starter_string = string.startswith('dont mind me, ')
+print(starter_string) #its falde because it didnt start with it
+
+startee = string.startswith('i')
+print(startee) #this is true
+
+#ends with
+ender_string = string.endswith('food')
+print(ender_string) # this is also true
+
+#to find a substring inside a string
+finders_keepers = 'i'
+loosers_weepers = 'u'
+print(string.find(finders_keepers)) # this gives 0 which is true
+print(string.find(loosers_weepers)) # this gives -1 which is false
+
+food = string.find('food')
+print(food) # this gives the index of where it starts, 7
+
+#to count howw many times a substring appears
+our_o = string.count('o')
+print(our_o) # the letter o appeared 3 times in our string
+
+#to capitalize our first letter
+capit_string = string.capitalize()
+print(capit_string)
+
+#to check of all the letters are in uppercase
+is_it_uppercase = string.isupper()
+print(is_it_uppercase) #it returns false
+
+#to check of all the letters are in lowercase
+is_it_lowercase = string.islower()
+print(is_it_lowercase) #it returns true
+
+#to title our string, every wordd has a first capital letter
+title_string = string.title()
+print(title_string)
