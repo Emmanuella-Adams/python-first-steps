@@ -17,3 +17,15 @@ foods = ['Apple', 'Carrot', 'Banana']
 for category in categories:
     for food in foods:
         print(category, food)
+
+
+words = ['mage', 'tank', 'lead', 'cyst', 'assasin', 'hero', 'analyst', 'Rhythm', 'myth']
+
+for word in words:
+    for letter in word:
+        if letter.lower() in 'aeiou': 
+             print(f'{word} has {letter} in it')
+             break
+
+        else:
+            print(f'{word} has no vowel in it')

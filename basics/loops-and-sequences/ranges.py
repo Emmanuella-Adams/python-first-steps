@@ -1,0 +1,1 @@
+#The range() function is used to generate a sequence of integers. Here is the basic syntax for the range() function:
