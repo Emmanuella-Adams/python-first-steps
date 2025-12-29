@@ -43,9 +43,8 @@ This list will grow as I advance.
 ```
 .
 ├── basics/
-│   ├── variables.py
-│   ├── loops.py
-│   └── functions.py
+├── loops/
+├──functions/
 ├── exercises/
 │   ├── challenge1.py
 │   └── challenge2.py
@@ -80,5 +79,6 @@ python filename.py
 ## **📬 Contributions**
 
 This is a personal learning repo, but suggestions are welcome.
+
 
 
