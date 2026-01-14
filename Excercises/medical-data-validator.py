@@ -42,7 +42,7 @@ def find_invalid_records(
 ):
 
     constraints = {
-        'patient_id': isinstance(patient_id, str) and re.search('p', patient_id) and re.Match object; span=(0, 1), match='P'
+        'patient_id': isinstance(patient_id, str) and re.search(r'P\d+', patient_id) is not None
     }
 
     return constraints
