@@ -1,34 +1,68 @@
-def add_setting(setting[key , value]):
-    setting.Lowercase()
-    if setting.key:
-        return f'Setting "[key]" already exists! Cannot add a new setting with this name.'
-    if not setting.key:
-        return "Setting '[key]' added with value '[value]' successfully!"
-    
+# Configuration Manager Module
 
 
+# Function to add a new setting
+def add_setting(test_settings , user_setting):
+
+    key , value = user_setting
+    key = key.lower()
+
+    # Check if the setting already exists
+    if key in test_settings:
+        return f"Setting '{key}' already exists! Cannot add a new setting with this name."
+    # Add the new setting
+    else:
+        value = value.lower()
+        test_settings[key] = value
+        return f"Setting '{key}' added with value '{value}' successfully!"
     
 
-def update_setting(setting[key , value]):
-    setting.Lowercase()
-    if setting.key:
-        return f"Setting '[key]' updated to '[value]' successfully!"
-    if not setting.key:
-        return "Setting '[key]' does not exist! Cannot update a non-existing setting."
-    
+# Function to update an existing setting
+def update_setting(test_settings , user_setting):
+    key , value = user_setting
+    key = key.lower()
+    value = value.lower()
+
+    # Check if the setting exists
+    if key in test_settings:
+        test_settings[key] = value
+        return f"Setting '{key}' updated to '{value}' successfully!"
+    # If the setting does not exist
+    else:
+        return f"Setting '{key}' does not exist! Cannot update a non-existing setting."
     
 
+# Function to delete a setting
+def delete_setting(test_settings , key):
+    key = key.lower()
 
+    # Check if the setting exists
+    if key in test_settings:
+        del test_settings[key]
+        return f"Setting '{key}' deleted successfully!"  
+
+    # If the setting does not exist 
+    else:
+        return f"Setting not found!"
     
-def delete_setting(setting[key , value]):
-        setting.Lowercase()
-        if setting.key:
-             setting.remove(key, value)
+# Function to view all settings
+def view_settings(test_settings):
+    # Check if there are any settings
+    if not test_settings:
+        return"No settings available."
+    # If settings exist, format them for display
+    else:
+        output_string = "Current User Settings:\n"
+        for key, value in test_settings.items():
+            key = key.capitalize()
+            output_string += f"{key}: {value}\n" 
+        return output_string
         
 
-        '''def view_setting():'''
-t
-
+# Sample test settings dictionary
 test_settings = {
-
+    'theme': 'dark',
+    'notifications': 'enabled',
+    'language': 'Korean',
+    'volume': 'high'
 }
