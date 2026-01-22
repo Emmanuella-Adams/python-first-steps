@@ -26,4 +26,22 @@ print(name)
 
 ```
 
-### Index error,
+### Index error: this is an index that doesnt exist in the list
+
+```
+color = ['white' , 'black' , 'pink' , 'blue']
+print(color[4])
+#this will raise an IndexError because the index stops at [3]
+
+```
+
+### Attribute error: this is the type of error that occurs when you try to use a method or property that doesnt exist in that same datatype.
+
+```
+num = 22
+num.append()
+#this will raise an AttributeError because there is no way an integer can append
+
+```
+
+
